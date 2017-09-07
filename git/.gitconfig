@@ -1,0 +1,104 @@
+[gui]
+	recentrepo = E:/gitRepo
+[user]
+	email = zekaryu@gmail.com
+	name = zekaryu
+[color]
+	ui = true
+[alias]
+    s = status
+    st = status
+    sb = status -s -b
+    #############  
+	  d = diff
+    di = diff
+    dc = diff --cached
+    dk = diff --check
+    dck = diff --cached --check
+    ############# 
+    c = commit
+    ca = commit -a
+    cm = commit -m
+    ci = commit
+    #############  	
+	  l = log --oneline
+    lg = log --oneline --graph --decorate
+	  lgf = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue) <%an>%Creset' --abbrev-commit
+	  lgo = log --graph --pretty=oneline --abbrev-commit
+	  #############  
+    o = checkout
+    co = checkout
+    ob = checkout -b 
+    cob = checkout -b
+	  #############  
+    b = branch
+    bv = branch -vv
+    ba = branch -a
+    bd = branch -d
+    br = branch -r
+    #############  
+    f = fetch
+    fo = fetch origin
+	  #############  
+    m = merge
+    #############  
+    ps = push
+    pl = pull
+    pb = pull --rebase
+    psf = push -f
+    psu = push -u
+    plu = pull -u
+    pso = push origin
+    plo = pull origin
+    pbo = pull --rebase origin
+    psfo = push -f origin
+    psuo = push -u origin
+    pluo = pull -u origin
+	  #############  
+    rb = rebase  
+    #############  
+    re = reset
+    rh = reset HEAD
+    reh = reset --hard
+    rem = reset --mixed
+    res = reset --soft
+    rehh = reset --hard HEAD
+    remh = reset --mixed HEAD
+    resh = reset --soft HEAD
+	  #############  
+    w = show
+	  #############  
+    human = name-rev --name-only --refs=refs/heads/*
+	  #############
+	  unstage = reset HEAD --
+	  last = log -1 HEAD
+[color "branch"]  
+    current = yellow bold  
+    local = green bold  
+    remote = cyan bold  
+[color "diff"]  
+    meta = yellow bold  
+    frag = magenta bold  
+    old = red bold  
+    new = green bold  
+    whitespace = red reverse  
+[color "status"]  
+    added = green bold  
+    changed = yellow bold  
+    untracked = red bold  
+[push]  
+    default = upstream  
+[difftool "sourcetree"]  
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"  
+    path =  
+[mergetool "sourcetree"]  
+    cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"  
+    trustExitCode = true  
+[filter "media"]  
+    required = true  
+    clean = git media clean %f  
+    smudge = git media smudge %f  
+[filter "hawser"]  
+    clean = git hawser clean %f  
+    smudge = git hawser smudge %f  
+    required = true  	
